@@ -1,0 +1,7 @@
+!b
+service: blogger
+title: %FILE%
+labels: productivity, Vim, programming
+draft: True
+
+%HERE%
