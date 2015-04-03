@@ -8,6 +8,11 @@ Requirements
 
 [b.py](http://http://pythonhosted.org/b.py/) - a command line tool for publishing posts.
 
+Optional utilities:
+* linkchecker: pip install linkchecker
+* [my plugin for checking markdown files](https://github.com/xvadim/linkchecker/blob/feature/linkcheck/plugins/markdowncheck.py) 
+  it still is not in the main branch
+
 Optional Vim-plugins:
 
 * [SirVer/ultisnips](https://github.com/SirVer/ultisnips) - snippets
@@ -46,3 +51,13 @@ to the snippets directory. This adds the snippet `code` which inserts the next f
 Also it makes available all snippets for mardown-files.
 
 Also the command `Rc file_name` available. This command inserts the given file as fragment of code.
+
+Links checking
+--------------
+1. Copy my plugin to the `<...>/site-packages/linkcheck/plugins` directory
+2. Add the next lines to the `~/.linkchecker/linkcheckerrc`:
+```ini
+[MarkdownCheck]
+filename_re=.*.(blog|markdown|md(own)?|mkdn?)$
+```
+3. Run `:make`
